@@ -67,7 +67,7 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	
+	<!--构建一个通知-->
 	<tx:advice id="txAdvice"  transaction-manager="transactionManager">
 		<tx:attributes>
 			<tx:method name="account*" propagation="REQUIRED" />
@@ -91,15 +91,6 @@
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
 	</aop:config>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-
 
 
 </beans>
